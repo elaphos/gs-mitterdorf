@@ -12,7 +12,12 @@ return [
         'Connections' => [
             'Default' => [
                 'charset' => 'utf8',
+                'dbname' => 'staging_gs_mitterdorf',
                 'driver' => 'mysqli',
+                'host' => '127.0.0.1',
+                'password' => 'tk5fgD24lG5lfeN',
+                'port' => '3306',
+                'user' => 'gs-mitterdorf',
             ],
         ],
     ],
