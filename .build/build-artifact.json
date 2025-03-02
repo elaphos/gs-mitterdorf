@@ -1,0 +1,670 @@
+{
+    "artifact": {
+        "version": 1,
+        "file": ".build/build-artifact.json",
+        "date": 1738835595
+    },
+    "template": {
+        "identifier": "elaphos/typo3-project-template",
+        "hash": "e4909ee88886faa096e50654ae81057e9ace114c",
+        "package": {
+            "name": "elaphos/typo3-project-template",
+            "version": "9999999-dev",
+            "sourceReference": "af0644620f1cb6326ef63af253276c399b2ea7e4",
+            "sourceUrl": "git@github.com:elaphos/typo3-project-template.git",
+            "distUrl": "https://api.github.com/repos/elaphos/typo3-project-template/zipball/af0644620f1cb6326ef63af253276c399b2ea7e4"
+        },
+        "provider": {
+            "name": "VCS repository (e.g. GitHub)",
+            "url": "https://github.com/elaphos/typo3-project-template.git"
+        }
+    },
+    "generator": {
+        "package": {
+            "name": "cpsit/project-builder",
+            "version": "2.13.0.0",
+            "sourceReference": null,
+            "sourceUrl": null,
+            "distUrl": null
+        },
+        "executor": "composer"
+    },
+    "result": {
+        "properties": {
+            "project": {
+                "name": "gs-mitterdorf",
+                "vendor": "elaphos",
+                "package_name": "elaphos/gs-mitterdorf",
+                "url": "https://gs-mitterdorf.de"
+            },
+            "packages": {
+                "typo3_cms": "13.4",
+                "typo3_testing_framework": "^9.0",
+                "typo3_console": "^8.2.1",
+                "typo3_console_binary": "typo3",
+                "php": "8.3",
+                "editorconfig_cli": "^2.0",
+                "typo3_system_extensions": [
+                    "typo3/cms-filemetadata"
+                ]
+            },
+            "features": {
+                "phpstan": "^2.0",
+                "rector": "^3.0",
+                "deployer": true
+            },
+            "deployer": {
+                "hosts": {
+                    "production": {
+                        "hostname": "95.217.116.215",
+                        "remote_user": "gs-mitterdorf"
+                    },
+                    "staging": {
+                        "confirmation": false,
+                        "hostname": null,
+                        "remote_user": null
+                    },
+                    "dev": {
+                        "confirmation": false,
+                        "hostname": null,
+                        "remote_user": null
+                    }
+                }
+            },
+            "ddev": {
+                "name": "gs-mitterdorf",
+                "webserver_type": "Apache",
+                "db_driver": "MariaDB",
+                "db_version": "10.11"
+            },
+            "author": {
+                "name": "Andreas Hirsch",
+                "email": "ah@elaphos.de"
+            }
+        },
+        "steps": [
+            {
+                "type": "collectBuildInstructions",
+                "applied": true
+            },
+            {
+                "type": "processSourceFiles",
+                "applied": true
+            },
+            {
+                "type": "generateBuildArtifact",
+                "applied": true
+            },
+            {
+                "type": "mirrorProcessedFiles",
+                "applied": true
+            },
+            {
+                "type": "showNextSteps",
+                "applied": true
+            }
+        ],
+        "processedFiles": [
+            {
+                "source": ".DS_Store",
+                "target": ".DS_Store"
+            },
+            {
+                "source": ".ddev/config.yaml.twig",
+                "target": ".ddev/config.yaml"
+            },
+            {
+                "source": ".ddev/php/php.ini.twig",
+                "target": ".ddev/php/php.ini"
+            },
+            {
+                "source": ".deployment/hosts.yaml.twig",
+                "target": ".deployment/hosts.yaml"
+            },
+            {
+                "source": ".editorconfig.twig",
+                "target": ".editorconfig"
+            },
+            {
+                "source": ".github/workflows/deploy-production.yml",
+                "target": ".github/workflows/deploy-production.yml"
+            },
+            {
+                "source": ".github/workflows/deploy-staging.yml",
+                "target": ".github/workflows/deploy-staging.yml"
+            },
+            {
+                "source": ".gitignore.twig",
+                "target": ".gitignore"
+            },
+            {
+                "source": ".php-cs-fixer.dist.php",
+                "target": ".php-cs-fixer.dist.php"
+            },
+            {
+                "source": "composer.json.twig",
+                "target": "composer.json"
+            },
+            {
+                "source": "config/sites/main/config.yaml.twig",
+                "target": "config/sites/main/config.yaml"
+            },
+            {
+                "source": "deploy.php.twig",
+                "target": "deploy.php"
+            },
+            {
+                "source": "packages/.gitkeep",
+                "target": "packages/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Build/.htaccess",
+                "target": "packages/sitepackage/Build/.htaccess"
+            },
+            {
+                "source": "packages/sitepackage/Build/Gruntfile.js",
+                "target": "packages/sitepackage/Build/Gruntfile.js"
+            },
+            {
+                "source": "packages/sitepackage/Build/package.json",
+                "target": "packages/sitepackage/Build/package.json"
+            },
+            {
+                "source": "packages/sitepackage/Classes/.htaccess",
+                "target": "packages/sitepackage/Classes/.htaccess"
+            },
+            {
+                "source": "packages/sitepackage/Classes/Controller/.gitkeep",
+                "target": "packages/sitepackage/Classes/Controller/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Classes/Domain/.gitkeep",
+                "target": "packages/sitepackage/Classes/Domain/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Classes/Domain/Model/.gitkeep",
+                "target": "packages/sitepackage/Classes/Domain/Model/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Classes/Domain/Repository/.gitkeep",
+                "target": "packages/sitepackage/Classes/Domain/Repository/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Classes/ViewHelpers/.gitkeep",
+                "target": "packages/sitepackage/Classes/ViewHelpers/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/.htaccess",
+                "target": "packages/sitepackage/Configuration/.htaccess"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/RTE/Default.yaml",
+                "target": "packages/sitepackage/Configuration/RTE/Default.yaml"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TCA/Overrides/pages.php",
+                "target": "packages/sitepackage/Configuration/TCA/Overrides/pages.php"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TCA/Overrides/sys_template.php",
+                "target": "packages/sitepackage/Configuration/TCA/Overrides/sys_template.php"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/All.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/All.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/example.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/example.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/RTE.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/RTE.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TypoScript/constants.typoscript",
+                "target": "packages/sitepackage/Configuration/TypoScript/constants.typoscript"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TypoScript/setup.typoscript",
+                "target": "packages/sitepackage/Configuration/TypoScript/setup.typoscript"
+            },
+            {
+                "source": "packages/sitepackage/README.md",
+                "target": "packages/sitepackage/README.md"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/.htaccess",
+                "target": "packages/sitepackage/Resources/Private/.htaccess"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Language/locallang.xlf",
+                "target": "packages/sitepackage/Resources/Private/Language/locallang.xlf"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Language/locallang_be.xlf",
+                "target": "packages/sitepackage/Resources/Private/Language/locallang_be.xlf"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Language/locallang_db.xlf",
+                "target": "packages/sitepackage/Resources/Private/Language/locallang_db.xlf"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Layouts/ContentElements/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Layouts/ContentElements/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Layouts/Page/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Layouts/Page/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Partials/ContentElements/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Partials/ContentElements/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Partials/Page/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Partials/Page/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Templates/ContentElements/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Templates/ContentElements/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Templates/Page/Example.html",
+                "target": "packages/sitepackage/Resources/Private/Templates/Page/Example.html"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Css/.gitkeep",
+                "target": "packages/sitepackage/Resources/Public/Css/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Fonts/.gitkeep",
+                "target": "packages/sitepackage/Resources/Public/Fonts/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/BackendLayouts/example.svg",
+                "target": "packages/sitepackage/Resources/Public/Icons/BackendLayouts/example.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/Extension.svg",
+                "target": "packages/sitepackage/Resources/Public/Icons/Extension.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/favicon.ico",
+                "target": "packages/sitepackage/Resources/Public/Icons/favicon.ico"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/logo-inverted.svg",
+                "target": "packages/sitepackage/Resources/Public/Icons/logo-inverted.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/logo.svg",
+                "target": "packages/sitepackage/Resources/Public/Icons/logo.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Images/logo-inverted.svg",
+                "target": "packages/sitepackage/Resources/Public/Images/logo-inverted.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Images/logo.svg",
+                "target": "packages/sitepackage/Resources/Public/Images/logo.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/JavaScript/Dist/scripts.js",
+                "target": "packages/sitepackage/Resources/Public/JavaScript/Dist/scripts.js"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/JavaScript/Src/main.js",
+                "target": "packages/sitepackage/Resources/Public/JavaScript/Src/main.js"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Scss/Theme/_variables.scss",
+                "target": "packages/sitepackage/Resources/Public/Scss/Theme/_variables.scss"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Scss/Theme/theme.scss",
+                "target": "packages/sitepackage/Resources/Public/Scss/Theme/theme.scss"
+            },
+            {
+                "source": "packages/sitepackage/composer.json",
+                "target": "packages/sitepackage/composer.json"
+            },
+            {
+                "source": "packages/sitepackage/ext_conf_template.txt",
+                "target": "packages/sitepackage/ext_conf_template.txt"
+            },
+            {
+                "source": "packages/sitepackage/ext_emconf.php",
+                "target": "packages/sitepackage/ext_emconf.php"
+            },
+            {
+                "source": "packages/sitepackage/ext_localconf.php",
+                "target": "packages/sitepackage/ext_localconf.php"
+            },
+            {
+                "source": "packages/sitepackage/ext_tables.php",
+                "target": "packages/sitepackage/ext_tables.php"
+            },
+            {
+                "source": "packages/sitepackage/ext_tables.sql",
+                "target": "packages/sitepackage/ext_tables.sql"
+            },
+            {
+                "source": "packages/sitepackage/ext_tables_static+adt.sql",
+                "target": "packages/sitepackage/ext_tables_static+adt.sql"
+            },
+            {
+                "source": "phpstan.neon",
+                "target": "phpstan.neon"
+            },
+            {
+                "source": "phpunit.xml",
+                "target": "phpunit.xml"
+            },
+            {
+                "source": "public/FIRST_INSTALL",
+                "target": "public/FIRST_INSTALL"
+            },
+            {
+                "source": "rector.php.twig",
+                "target": "rector.php"
+            },
+            {
+                "source": "typoscript-lint.yml.twig",
+                "target": "typoscript-lint.yml"
+            },
+            {
+                "source": ".DS_Store",
+                "target": ".DS_Store"
+            },
+            {
+                "source": ".ddev/config.yaml",
+                "target": ".ddev/config.yaml"
+            },
+            {
+                "source": ".ddev/php/php.ini",
+                "target": ".ddev/php/php.ini"
+            },
+            {
+                "source": ".deployment/hosts.yaml",
+                "target": ".deployment/hosts.yaml"
+            },
+            {
+                "source": ".editorconfig",
+                "target": ".editorconfig"
+            },
+            {
+                "source": ".github/workflows/deploy-production.yml",
+                "target": ".github/workflows/deploy-production.yml"
+            },
+            {
+                "source": ".github/workflows/deploy-staging.yml",
+                "target": ".github/workflows/deploy-staging.yml"
+            },
+            {
+                "source": ".gitignore",
+                "target": ".gitignore"
+            },
+            {
+                "source": ".php-cs-fixer.dist.php",
+                "target": ".php-cs-fixer.dist.php"
+            },
+            {
+                "source": "composer.json",
+                "target": "composer.json"
+            },
+            {
+                "source": "config/sites/main/config.yaml",
+                "target": "config/sites/main/config.yaml"
+            },
+            {
+                "source": "deploy.php",
+                "target": "deploy.php"
+            },
+            {
+                "source": "packages/.gitkeep",
+                "target": "packages/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Build/.htaccess",
+                "target": "packages/sitepackage/Build/.htaccess"
+            },
+            {
+                "source": "packages/sitepackage/Build/Gruntfile.js",
+                "target": "packages/sitepackage/Build/Gruntfile.js"
+            },
+            {
+                "source": "packages/sitepackage/Build/package.json",
+                "target": "packages/sitepackage/Build/package.json"
+            },
+            {
+                "source": "packages/sitepackage/Classes/.htaccess",
+                "target": "packages/sitepackage/Classes/.htaccess"
+            },
+            {
+                "source": "packages/sitepackage/Classes/Controller/.gitkeep",
+                "target": "packages/sitepackage/Classes/Controller/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Classes/Domain/.gitkeep",
+                "target": "packages/sitepackage/Classes/Domain/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Classes/Domain/Model/.gitkeep",
+                "target": "packages/sitepackage/Classes/Domain/Model/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Classes/Domain/Repository/.gitkeep",
+                "target": "packages/sitepackage/Classes/Domain/Repository/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Classes/ViewHelpers/.gitkeep",
+                "target": "packages/sitepackage/Classes/ViewHelpers/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/.htaccess",
+                "target": "packages/sitepackage/Configuration/.htaccess"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/RTE/Default.yaml",
+                "target": "packages/sitepackage/Configuration/RTE/Default.yaml"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TCA/Overrides/pages.php",
+                "target": "packages/sitepackage/Configuration/TCA/Overrides/pages.php"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TCA/Overrides/sys_template.php",
+                "target": "packages/sitepackage/Configuration/TCA/Overrides/sys_template.php"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/All.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/All.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/example.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/example.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/RTE.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/RTE.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig",
+                "target": "packages/sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TypoScript/constants.typoscript",
+                "target": "packages/sitepackage/Configuration/TypoScript/constants.typoscript"
+            },
+            {
+                "source": "packages/sitepackage/Configuration/TypoScript/setup.typoscript",
+                "target": "packages/sitepackage/Configuration/TypoScript/setup.typoscript"
+            },
+            {
+                "source": "packages/sitepackage/README.md",
+                "target": "packages/sitepackage/README.md"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/.htaccess",
+                "target": "packages/sitepackage/Resources/Private/.htaccess"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Language/locallang.xlf",
+                "target": "packages/sitepackage/Resources/Private/Language/locallang.xlf"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Language/locallang_be.xlf",
+                "target": "packages/sitepackage/Resources/Private/Language/locallang_be.xlf"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Language/locallang_db.xlf",
+                "target": "packages/sitepackage/Resources/Private/Language/locallang_db.xlf"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Layouts/ContentElements/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Layouts/ContentElements/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Layouts/Page/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Layouts/Page/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Partials/ContentElements/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Partials/ContentElements/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Partials/Page/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Partials/Page/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Templates/ContentElements/.gitkeep",
+                "target": "packages/sitepackage/Resources/Private/Templates/ContentElements/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Private/Templates/Page/Example.html",
+                "target": "packages/sitepackage/Resources/Private/Templates/Page/Example.html"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Css/.gitkeep",
+                "target": "packages/sitepackage/Resources/Public/Css/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Fonts/.gitkeep",
+                "target": "packages/sitepackage/Resources/Public/Fonts/.gitkeep"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/BackendLayouts/example.svg",
+                "target": "packages/sitepackage/Resources/Public/Icons/BackendLayouts/example.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/Extension.svg",
+                "target": "packages/sitepackage/Resources/Public/Icons/Extension.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/favicon.ico",
+                "target": "packages/sitepackage/Resources/Public/Icons/favicon.ico"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/logo-inverted.svg",
+                "target": "packages/sitepackage/Resources/Public/Icons/logo-inverted.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Icons/logo.svg",
+                "target": "packages/sitepackage/Resources/Public/Icons/logo.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Images/logo-inverted.svg",
+                "target": "packages/sitepackage/Resources/Public/Images/logo-inverted.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Images/logo.svg",
+                "target": "packages/sitepackage/Resources/Public/Images/logo.svg"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/JavaScript/Dist/scripts.js",
+                "target": "packages/sitepackage/Resources/Public/JavaScript/Dist/scripts.js"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/JavaScript/Src/main.js",
+                "target": "packages/sitepackage/Resources/Public/JavaScript/Src/main.js"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Scss/Theme/_variables.scss",
+                "target": "packages/sitepackage/Resources/Public/Scss/Theme/_variables.scss"
+            },
+            {
+                "source": "packages/sitepackage/Resources/Public/Scss/Theme/theme.scss",
+                "target": "packages/sitepackage/Resources/Public/Scss/Theme/theme.scss"
+            },
+            {
+                "source": "packages/sitepackage/composer.json",
+                "target": "packages/sitepackage/composer.json"
+            },
+            {
+                "source": "packages/sitepackage/ext_conf_template.txt",
+                "target": "packages/sitepackage/ext_conf_template.txt"
+            },
+            {
+                "source": "packages/sitepackage/ext_emconf.php",
+                "target": "packages/sitepackage/ext_emconf.php"
+            },
+            {
+                "source": "packages/sitepackage/ext_localconf.php",
+                "target": "packages/sitepackage/ext_localconf.php"
+            },
+            {
+                "source": "packages/sitepackage/ext_tables.php",
+                "target": "packages/sitepackage/ext_tables.php"
+            },
+            {
+                "source": "packages/sitepackage/ext_tables.sql",
+                "target": "packages/sitepackage/ext_tables.sql"
+            },
+            {
+                "source": "packages/sitepackage/ext_tables_static+adt.sql",
+                "target": "packages/sitepackage/ext_tables_static+adt.sql"
+            },
+            {
+                "source": "phpstan.neon",
+                "target": "phpstan.neon"
+            },
+            {
+                "source": "phpunit.xml",
+                "target": "phpunit.xml"
+            },
+            {
+                "source": "public/FIRST_INSTALL",
+                "target": "public/FIRST_INSTALL"
+            },
+            {
+                "source": "rector.php",
+                "target": "rector.php"
+            },
+            {
+                "source": "typoscript-lint.yml",
+                "target": "typoscript-lint.yml"
+            }
+        ]
+    }
+}

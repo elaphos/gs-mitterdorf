@@ -1,0 +1,25 @@
+identifier: BP/Media
+fields:
+  -
+    identifier: media_tab
+    type: Tab
+    label: LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media
+  -
+    identifier: assets
+    useExistingField: true
+  -
+    identifier: file_folder
+    useExistingField: true
+    type: Folder
+  -
+    identifier: filelink_sorting
+    useExistingField: true
+    type: Select
+  -
+    identifier: mediaAdjustments_palette
+    type: Palette
+    label: LLL:EXT:frontend/Resources/Private/Language/Database.xlf:tt_content.palette.mediaAdjustments
+    fields:
+      -
+        identifier: imagewidth
+        useExistingField: true

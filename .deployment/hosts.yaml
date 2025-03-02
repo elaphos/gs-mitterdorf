@@ -1,0 +1,7 @@
+hosts:
+  production:
+    hostname: '95.217.116.215'
+    remote_user: 'gs-mitterdorf'
+    port: 22
+    deploy_path: '/home/gs-mitterdorf/typo3.production'
+

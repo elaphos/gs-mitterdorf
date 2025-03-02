@@ -1,0 +1,14 @@
+name: elaphos/hero
+basics:
+  - TYPO3/Links
+fields:
+  - identifier: BP/Headers
+    type: Basic
+  - identifier: assets
+    useExistingField: true
+    label: Video
+  -
+    identifier: BP/Appearance
+    type: Basic
+group: interactive
+

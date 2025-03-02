@@ -1,0 +1,39 @@
+identifier: BP/Headers
+fields:
+  -
+    identifier: header_palette
+    type: Palette
+    label: LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers
+    fields:
+      -
+        identifier: header
+        useExistingField: true
+      -
+        type: Linebreak
+      -
+        identifier: header_layout
+        useExistingField: true
+      -
+        identifier: header_class
+        useExistingField: true
+        type: Select
+      -
+        identifier: header_position
+        useExistingField: true
+      -
+        identifier: date
+        useExistingField: true
+      -
+        type: Linebreak
+      -
+        identifier: header_link
+        useExistingField: true
+      -
+        type: Linebreak
+      -
+        identifier: subheader
+        useExistingField: true
+      -
+        identifier: subheader_class
+        useExistingField: true
+        type: Select

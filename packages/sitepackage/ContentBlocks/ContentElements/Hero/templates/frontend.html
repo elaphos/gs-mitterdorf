@@ -1,0 +1,22 @@
+<f:layout name="Default" />
+<f:section name="Main">
+    <f:asset.css identifier="hero" href="{cb:assetPath()}/frontend.css"/>
+    <div class="hero">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="{data.assets.0.originalFile.publicUrl}">
+        </video>
+
+        <!-- The header content -->
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">{data.assets.0.title}</h1>
+                    <p class="lead mb-0">{data.assets.0.description}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</f:section>

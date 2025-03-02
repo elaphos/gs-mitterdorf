@@ -1,0 +1,23 @@
+<div class="col-sm-12 col-md-4">
+    <figure class="card">
+        <picture class="ratio" style="--bs-aspect-ratio: 66.6%;">
+            <f:if condition="{newsItem.mediaPreviews}">
+                <f:then>
+                    <f:media class="img-fluid" file="{newsItem.mediaPreviews.0}" title="{newsItem.mediaPreviews.0.originalResource.title}" alt="{newsItem.mediaPreviews.0.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}" />
+                </f:then>
+                <f:else>
+                    <f:if condition="{settings.displayDummyIfNoMedia}">
+                        <f:image class="img-dummy img-fluid" src="{settings.list.media.dummyImage}" title="" alt="" loading="{settings.list.media.image.lazyLoading}" />
+                    </f:if>
+                </f:else>
+            </f:if>
+        </picture>
+        <n:link newsItem="{newsItem}" settings="{settings}" class="stretched-link" title="{newsItem.title}">
+            <figcaption>
+                <h4>{newsItem.title}</h4>
+                <p class="small"><f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date></p>
+            </figcaption>
+        </n:link>
+    </figure>
+
+</div>

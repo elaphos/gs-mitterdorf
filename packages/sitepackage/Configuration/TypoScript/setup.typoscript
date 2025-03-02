@@ -1,0 +1,54 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:sitepackage/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        sitepackage_scripts = EXT:sitepackage/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}
+lib.contentBlock {
+  partialRootPaths.0 < lib.contentElement.partialRootPaths.0
+  layoutRootPaths.0 < lib.contentElement.layoutRootPaths.0
+
+  settings < lib.contentElement.settings
+}
+plugin.tx_news {
+  settings {
+    #displayDummyIfNoMedia = 1
+    list {
+      media {
+        dummyImage = EXT:sitepackage/Resources/Public/Images/logo.jpg
+      }
+    }
+  }
+  view {
+    partialRootPaths {
+      100 = EXT:sitepackage/Resources/Private/Partials/tx_news/
+    }
+    templateRootPaths {
+      100 = EXT:sitepackage/Resources/Private/Templates/tx_news/
+    }
+  }
+}
