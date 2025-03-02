@@ -122,13 +122,8 @@ task('typo3:language_update', function () {
 
 desc('Execute upgrade wizards');
 task('typo3:upgrade_all', function () {
-{% if packages.typo3_cms == "11.5" %}
-    run('{{bin/typo3_console}} upgrade:prepare');
-    run('{{bin/typo3_console}} upgrade:run all --confirm all');
-{% else %}
     run('{{bin/typo3_console}} upgrade:run');
-{% endif %}
-%});
+});
 
 // Register TYPO3 tasks
 before('deploy:symlink', function () {
@@ -152,4 +147,3 @@ task('deploy', [
 
 // Unlock on failed deployment
 after('deploy:failed', 'deploy:unlock');
-
