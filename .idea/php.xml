@@ -24,8 +24,6 @@
       <path value="$PROJECT_DIR$/vendor/elaphos/sitepackage" />
       <path value="$PROJECT_DIR$/vendor/helmich/typo3-typoscript-lint" />
       <path value="$PROJECT_DIR$/vendor/helmich/typo3-typoscript-parser" />
-      <path value="$PROJECT_DIR$/vendor/icecave/parity" />
-      <path value="$PROJECT_DIR$/vendor/icecave/repr" />
       <path value="$PROJECT_DIR$/vendor/lolli42/finediff" />
       <path value="$PROJECT_DIR$/vendor/helhum/typo3-console" />
       <path value="$PROJECT_DIR$/vendor/helhum/php-error-reporting" />
@@ -204,6 +202,7 @@
       <path value="$PROJECT_DIR$/vendor/wapplersystems/zabbix_client" />
       <path value="$PROJECT_DIR$/vendor/friendsoftypo3/content-blocks" />
       <path value="$PROJECT_DIR$/vendor/b13/container" />
+      <path value="$PROJECT_DIR$/vendor/christophlehmann/httpbasicauth" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.3">
