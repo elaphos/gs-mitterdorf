@@ -1,0 +1,24 @@
+base: /
+dependencies:
+  - bootstrap-package/full
+  - bootstrap-package/content-elements
+  - typo3/seo-sitemap
+  - CodingFreaks/cf-cookiemanager
+  - typo3/form
+  - georgringer/news
+  - georgringer/news-sitemap
+  - georgringer/news-twb5
+  - elaphos/sitepackage
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    locale: de_DE
+    hreflang: ''
+    base: /
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    flag: de
+    languageId: 0
+rootPageId: 1
+websiteTitle: ''

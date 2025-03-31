@@ -13,7 +13,7 @@
 /config/system/*
 !/config/system/additional.php
 !/config/system/settings.php
-
+!/config/sites/
 # Temporary files
 /var/
 

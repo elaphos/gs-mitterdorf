@@ -1,0 +1,34 @@
+page:
+  logo:
+    file: 'EXT:sitepackage/Resources/Public/Images/logo.jpg'
+    height: 104
+    width: 360
+  theme:
+    language:
+      enable: false
+    copyright:
+      enable: false
+    contact:
+      enable: true
+      data:
+        title: 'Grundschule Mitterdorf'
+        addressLine1: 'Bgm.-Bräu-Straße 5'
+        addressLine2: '93426 Roding - Mitterdorf'
+        phone: '+49 (9461) 9113630'
+        fax: '+49 (9461) 91136318'
+        www: 'https://gs-mitterdorf.de'
+    footernavigation:
+      navigationType: directory
+      navigationValue: '18'
+    meta:
+      navigationValue: '18'
+      navigationType: directory
+plugin:
+  bootstrap_package:
+    settings:
+      scss:
+        primary: '#941D10'
+        secondary: '#21835B'
+        tertiary: '#FAC73C'
+        dark: $gray-600
+        font-family-sans-serif: 'Noto Sans, sans-serif'
