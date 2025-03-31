@@ -15,4 +15,17 @@ call_user_func(function()
         'Configuration/TsConfig/Page/All.tsconfig',
         'Sitepackage'
     );
+    $customPageDoktype = 116;
+
+    // Add the new doktype to the page type selector
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'pages',
+        'doktype',
+        [
+            'label' => 'Seite ohne Inhalt',
+            'value' => $customPageDoktype,
+            'icon'  => 'apps-pagetree-spacer',
+            'group' => 'special',
+        ],
+    );
 });

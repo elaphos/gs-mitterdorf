@@ -1,6 +1,6 @@
 base: /
 basicauth_allow_beuser: true
-basicauth_allow_devipmask: true
+basicauth_allow_devipmask: false
 basicauth_credentials: 'gs-mitterdorf:roding'
 basicauth_enabled: true
 dependencies:

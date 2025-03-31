@@ -23,6 +23,10 @@ page:
     meta:
       navigationValue: '18'
       navigationType: directory
+  fluidtemplate:
+    layoutRootPath: 'EXT:sitepackage/Resources/Private/Layouts/Page/'
+    partialRootPath: 'EXT:sitepackage/Resources/Private/Partials/Page/'
+    templateRootPath: 'EXT:sitepackage/Resources/Private/Partials/Page/'
 plugin:
   bootstrap_package:
     settings:
