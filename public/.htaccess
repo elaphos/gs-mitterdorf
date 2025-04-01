@@ -391,4 +391,4 @@ FileETag None
 
 
 # Add your own rules here.
-
+SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
