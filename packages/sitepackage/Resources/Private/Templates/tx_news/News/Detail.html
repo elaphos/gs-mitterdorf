@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/BK2K/BootstrapPackage/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
 <f:layout name="Detail" />
@@ -10,6 +11,7 @@
 -->
 
 <f:section name="content">
+    <f:debug>{_all}</f:debug>
     <f:if condition="{newsItem}">
         <n:format.nothing>
             <n:excludeDisplayedNews newsItem="{newsItem}" />
@@ -38,14 +40,14 @@
                             <f:if condition="{paginated.prev}">
                                 <li class="page-item">
                                     <n:link newsItem="{paginated.prev}" class="page-link" settings="{settings}">
-                                        <span aria-hidden="true">&laquo;</span> {paginated.prev.title}
+                                        <span aria-hidden="true">&laquo;</span> {f:if(condition:paginated.prev.teaser, then: '{paginated.prev.teaser}', else: '{paginated.prev.title}')}
                                     </n:link>
                                 </li>
                             </f:if>
                             <f:if condition="{paginated.next}">
                                 <li class="page-item">
                                     <n:link newsItem="{paginated.next}" class="page-link" settings="{settings}">
-                                        {paginated.next.title} <span aria-hidden="true">&raquo;</span>
+                                        {f:if(condition:paginated.next.teaser, then: '{paginated.next.teaser}', else: '{paginated.next.title}')} <span aria-hidden="true">&raquo;</span>
                                     </n:link>
                                 </li>
                             </f:if>
@@ -63,9 +65,19 @@
                         <f:render section="inner-content" arguments="{_all}" />
                     </div>
                     <div class="col-md-4">
+                        <div class="row">
                         <f:for each="{newsItem.mediaNonPreviews}" as="mediaElement">
                             <div class="thumbnail">
-                                <f:media file="{mediaElement}" class="img-fluid" />
+                                <bk2k:link.lightbox image="{mediaElement}" maxHeight="{settings.lightbox.image.maxHeight}"
+                                                    maxWidth="{settings.lightbox.image.maxWidth}"
+                                                    class="lightbox"
+                                                    rel="lightbox-group-{newsItem.uid}"
+                                                    lightbox-title="{mediaElement.properties.title}"
+                                                    lightbox-alt="mediaElement.properties.alternative}"
+                                                    lightbox-caption="{mediaElement.properties.description}"
+                                >
+                                    <f:media file="{mediaElement}" cropVariant="thumbnail" width="200" class="img-thumbnail float-left" />
+                                </bk2k:link.lightbox>
                                 <f:if condition="{mediaElement.description}">
                                     <div class="caption">
                                         {mediaElement.description}
@@ -73,6 +85,7 @@
                                 </f:if>
                             </div>
                         </f:for>
+                        </div>
                     </div>
                 </div>
             </f:then>

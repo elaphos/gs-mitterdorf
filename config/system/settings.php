@@ -87,6 +87,13 @@ return [
             'showCheckIntegrityInfoInReports' => '1',
             'showCheckIntegrityInfoInReportsSeconds' => '86400',
         ],
+        'rx_shariff' => [
+            'allowedDomains' => 'SERVER_NAME',
+            'facebook_app_id' => '',
+            'facebook_secret' => '',
+            'services' => 'Facebook, LinkedIn, Reddit, StumbleUpon, Flattr, Pinterest, Xing, AddThis, Vk',
+            'ttl' => '3600',
+        ],
         'scheduler' => [
             'maxLifetime' => '1440',
         ],

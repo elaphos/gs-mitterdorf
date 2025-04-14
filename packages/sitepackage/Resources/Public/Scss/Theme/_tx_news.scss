@@ -1,21 +1,31 @@
-figure.card {
-    border-radius:0;
-    border: none;
-    figcaption {
-        width: 100%;
-        display: block;
-        position: absolute;
-        bottom: 0;
-        padding: 0.25rem;
-        backdrop-filter: blur(5px);
-        color: light-dark(#000, #fff);
-        h4 {
-            padding: 0;
-            margin: 0;
-        }
-        p {
-            padding:0;
-            margin:0;
+.news {
+    nav {
+        margin-bottom: 3rem;
+    }
+    .thumbnail {
+        margin-bottom: 0.75rem;
+    }
+    figure.card {
+        border-radius:0;
+        border: none;
+        figcaption {
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            padding: 0.25rem;
+            backdrop-filter: blur(5px);
+            color: #ffffff;
+            background-color: rgba(55,55,55,0.3);
+            h4 {
+                color: #ffffff;
+                padding: 0 5px;
+                margin: 0;
+            }
+            p {
+                padding:0 5px;
+                margin:0;
+            }
         }
     }
 }

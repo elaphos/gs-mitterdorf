@@ -6,5 +6,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
 tx_news.templateLayouts {
-  99 = TopNews
+  99 = News-Grid
+  98 = News-Accordion
 }

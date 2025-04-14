@@ -37,6 +37,10 @@ lib.contentBlock {
 plugin.tx_news {
   settings {
     #displayDummyIfNoMedia = 1
+    backPid = 1
+    detail {
+      showPrevNext = 1
+    }
     list {
       media {
         dummyImage = EXT:sitepackage/Resources/Public/Images/logo.jpg
@@ -44,6 +48,9 @@ plugin.tx_news {
     }
   }
   view {
+    layoutRootPaths {
+      100 = EXT:sitepackage/Resources/Private/Layouts/tx_news/
+    }
     partialRootPaths {
       100 = EXT:sitepackage/Resources/Private/Partials/tx_news/
     }

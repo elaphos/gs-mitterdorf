@@ -72,7 +72,14 @@
 @import "tx_news";
 
 
+.hero {
+    h1 {
+        color: #ffffff;
+        font-weight: bold;
+        font-size: calc(5vw)
 
+    }
+}
 // Footer
 .footer-contact-headline {
     color: var(--frame-color);

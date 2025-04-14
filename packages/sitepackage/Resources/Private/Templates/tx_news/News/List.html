@@ -6,28 +6,89 @@
 	=====================
 		Templates/News/List.html
 -->
+<f:section name="content98">
+    <f:if condition="{news}">
+    <div id="carousel-{data.uid}"
+         class="carousel carousel-small carousel-slide slide"
+         data-bs-wrap="true"
+         data-bs-ride="carousel"
+         data-bs-interval="10000"
+    role="region"
+    aria-roledescription="carousel"
+    >
+    <div class="carousel-inner">
+        <f:for each="{news}" as="item" iteration="iteration">
+            <f:variable name="itemClass">item</f:variable>
+            <f:if condition="{iteration.isFirst}"><f:variable name="itemClass">{itemClass} active</f:variable></f:if>
+            <f:variable name="itemClass">{itemClass} carousel-item</f:variable>
+            <f:variable name="itemClass">{itemClass} carousel-item-layout-custom</f:variable>
+            <f:variable name="itemClass">{itemClass} carousel-item-type-image</f:variable>
+            <f:variable name="itemStyle"></f:variable>
+            <div
+                class="{itemClass}"
+                aria-current="{f:if(condition: iteration.isFirst, then:'true', else: 'false')}"
+                data-itemno="{iteration.index}"
+                style="{itemStyle}"
+                role="group"
+                aria-roledescription="slide"
+            >
+                <div class="carousel-content">
+                    <n:link newsItem="{item}" settings="{settings}" title="{item.title}" additionalAttributes="{draggable:'false'}" class="carousel-content-link">
+                        <div class="carousel-content-inner">
+                            <div class="carousel-image">
+                                <f:if condition="{item.mediaPreviews}">
+                                    <f:then>
+                                        <figure class="figure">
+                                            <f:media class="img-fluid" file="{item.mediaPreviews.0}" title="{item.mediaPreviews.0.originalResource.title}" alt="{item.mediaPreviews.0.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}"   />
+                                            <figcaption class="figure-caption">{item.title}</figcaption>
+                                        </figure>
 
-<f:section name="content">
-    <!--TYPO3SEARCH_end-->
-    <f:if condition="{settings.templateLayout} == 99">
-        <f:then>
-            <f:if condition="news">
-                <f:then>
-                    <div class="news-list-view container" id="news-container-{contentObjectData.uid}">
-                        <div class="row">
-                            <f:for each="{news}" as="newsItem" iteration="iterator">
-                                <f:render partial="List/Item99" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                            </f:for>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{settings.displayDummyIfNoMedia}">
+                                            <f:image class="img-dummy img-fluid" src="{settings.list.media.dummyImage}" title="" alt="" loading="{settings.list.media.image.lazyLoading}"  maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </div>
                         </div>
-                    </div>
-                </f:then>
-                <f:else>
-
-                </f:else>
-            </f:if>
+                    </n:link>
+                </div>
+            </div>
+        </f:for>
+    </div>
+        <f:if condition="{news -> f:count()} > 1">
+            <button data-bs-slide="prev" data-bs-target="#carousel-{data.uid}" type="button" class="carousel-control carousel-control-prev">
+                <span class="carousel-control-icon carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{f:translate(key: 'previous', extensionName: 'bootstrap_package')}</span>
+            </button>
+            <button data-bs-slide="next" data-bs-target="#carousel-{data.uid}" type="button" class="carousel-control carousel-control-next">
+                <span class="carousel-control-icon carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">{f:translate(key: 'next', extensionName: 'bootstrap_package')}</span>
+            </button>
+        </f:if>
+    </div>
+    </f:if>
+</f:section>
+<f:section name="content99">
+    <f:if condition="news">
+        <f:then>
+            <div class="news-list-view container" id="news-container-{contentObjectData.uid}">
+                <div class="row">
+                    <f:for each="{news}" as="newsItem" iteration="iterator">
+                        <f:render partial="List/Item99" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                    </f:for>
+                </div>
+            </div>
         </f:then>
         <f:else>
-            <f:if condition="{news}">
+
+        </f:else>
+    </f:if>
+</f:section>
+<f:section name="content">
+    <!--TYPO3SEARCH_end-->
+        <f:if condition="{news}">
                 <f:then>
                     <div class="news-list-view" id="news-container-{contentObjectData.uid}">
                         <f:if condition="{settings.hidePagination}">
@@ -55,8 +116,6 @@
                         <f:translate key="list_nonewsfound" />
                     </div>
                 </f:else>
-            </f:if>
-        </f:else>
     </f:if>
     <!--TYPO3SEARCH_begin-->
 </f:section>
