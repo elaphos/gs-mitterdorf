@@ -71,6 +71,9 @@
 
 @import "tx_news";
 
+a {
+    text-decoration: none;
+}
 
 .hero {
     h1 {
@@ -82,5 +85,5 @@
 }
 // Footer
 .footer-contact-headline {
-    color: var(--frame-color);
+    color: $primary;
 }

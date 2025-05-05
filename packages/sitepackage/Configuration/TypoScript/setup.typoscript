@@ -43,7 +43,7 @@ plugin.tx_news {
     }
     list {
       media {
-        dummyImage = EXT:sitepackage/Resources/Public/Images/logo.jpg
+        dummyImage = EXT:sitepackage/Resources/Public/Images/logogsm.png
       }
     }
   }

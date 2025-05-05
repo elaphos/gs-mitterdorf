@@ -1,8 +1,9 @@
 page:
   logo:
-    file: 'EXT:sitepackage/Resources/Public/Images/logo.jpg'
+    file: 'EXT:sitepackage/Resources/Public/Images/logogsm.png'
     height: 104
     width: 360
+    alt: 'Logo Grundschule Mitterdorf'
   theme:
     language:
       enable: false
@@ -18,8 +19,7 @@ page:
         fax: '+49 (9461) 91136318'
         www: 'https://gs-mitterdorf.de'
     footernavigation:
-      navigationType: directory
-      navigationValue: '18'
+      enable: false
     meta:
       navigationValue: '18'
       navigationType: directory
@@ -31,8 +31,9 @@ plugin:
   bootstrap_package:
     settings:
       scss:
-        primary: '#941D10'
-        secondary: '#21835B'
-        tertiary: '#FAC73C'
+        primary: '#ea6821'
+        secondary: '#f1b827'
+        tertiary: '#32839e'
         dark: $gray-600
         font-family-sans-serif: 'Noto Sans, sans-serif'
+        quaternary: '#1a475c'

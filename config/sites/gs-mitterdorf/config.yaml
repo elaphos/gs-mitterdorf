@@ -25,4 +25,7 @@ languages:
     flag: de
     languageId: 0
 rootPageId: 1
+settings:
+  redirects:
+    autoUpdateSlugs: true
 websiteTitle: 'Grundschule Mitterdorf'

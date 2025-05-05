@@ -13,10 +13,10 @@ $gray-800:                          #313131 !default;
 $gray-900:                          #212121 !default;
 $black:                             #000000 !default;
 
-$primary:                           #577760 !default;
-$secondary:                         #514553 !default;
-$tertiary:                          #758c7f !default;
-$quaternary:                        #2d1e2f !default;
+$primary:                           #ea6821 !default;
+$secondary:                         #f1b827 !default;
+$tertiary:                          #32839e !default;
+$quaternary:                        #1a475c !default;
 
 $default:                           #eaebec !default;
 $success:                           #3a833a !default;
@@ -46,6 +46,7 @@ $theme-colors: (
 
 $body-bg:                           $white !default;
 $body-color:                        $gray-600;
+$link-color:                        $secondary;
 
 //
 // Options
@@ -65,7 +66,7 @@ $h4-font-size:                      $font-size-base * 1.25 !default;
 $h5-font-size:                      $font-size-base * 1 !default;
 $h6-font-size:                      $font-size-base * .85 !default;
 
-$headings-font-weight:              300 !default;
+$headings-font-weight:              700 !default;
 $headings-color:   $primary;
 $display-font-sizes: (
     1: $h1-font-size * 1.5,
@@ -145,14 +146,14 @@ $footer-sections: ();
 $footer-sections: map-merge(
     (
         'content': (
-            'background':   $dark,
-            'color':        color-contrast($dark),
-            'link-color':   a11y-color($dark, $link-color)
+            'background':   $tertiary,
+            'color':        color-contrast($tertiary),
+            'link-color':   a11y-color($tertiary, $link-color)
         ),
         'meta': (
-            'background':   rgb(53,58,59,1),
-            'color':        rgb(153,153,153,1),
-            'link-color':   $primary
+            'background':   $tertiary,
+            'color':        $gray-200,
+            'link-color':   a11y-color($tertiary, $link-color)
         )
     ),
     $footer-sections
