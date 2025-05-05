@@ -1,6 +1,6 @@
 page:
   logo:
-    file: 'EXT:sitepackage/Resources/Public/Images/logogsm.png'
+    file: 'EXT:sitepackage/Resources/Public/Images/logo.svg'
     height: 104
     width: 360
     alt: 'Logo Grundschule Mitterdorf'
