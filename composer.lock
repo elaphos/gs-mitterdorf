@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e256bffb4ba969fbc90bf78123f71ac",
+    "content-hash": "248612786fa84c19ff48aa02a236e58b",
     "packages": [
         {
             "name": "b13/container",
@@ -2002,6 +2002,49 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.9.0"
             },
             "time": "2024-03-31T07:05:07+00:00"
+        },
+        {
+            "name": "minifranske/gravatar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsaris/gravatar.git",
+                "reference": "9482cad6db29bca81ed27c6768629c2c03419e1d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsaris/gravatar/zipball/9482cad6db29bca81ed27c6768629c2c03419e1d",
+                "reference": "9482cad6db29bca81ed27c6768629c2c03419e1d",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^10 || ^11 || ^12 || ^13"
+            },
+            "replace": {
+                "typo3-ter/gravatar": "self.version"
+            },
+            "default-branch": true,
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "gravatar"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MiniFranske\\Gravatar\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "AvatarProvider for Gravatar support in TYPO3 backend",
+            "support": {
+                "issues": "https://github.com/fsaris/gravatar/issues",
+                "source": "https://github.com/fsaris/gravatar/tree/master"
+            },
+            "time": "2025-02-05T21:05:00+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -13595,6 +13638,7 @@
     "stability-flags": {
         "christophlehmann/httpbasicauth": 20,
         "elaphos/sitepackage": 20,
+        "minifranske/gravatar": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,

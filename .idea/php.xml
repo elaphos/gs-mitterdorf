@@ -201,6 +201,7 @@
       <path value="$PROJECT_DIR$/vendor/friendsoftypo3/content-blocks" />
       <path value="$PROJECT_DIR$/vendor/b13/container" />
       <path value="$PROJECT_DIR$/vendor/christophlehmann/httpbasicauth" />
+      <path value="$PROJECT_DIR$/vendor/minifranske/gravatar" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.3">

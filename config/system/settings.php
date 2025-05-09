@@ -65,6 +65,12 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
+        'gravatar' => [
+            'fallback' => '',
+            'fallbackImageUrl' => '',
+            'forceProvider' => '0',
+            'useProxy' => '1',
+        ],
         'news' => [
             'advancedMediaPreview' => '1',
             'archiveDate' => 'date',
