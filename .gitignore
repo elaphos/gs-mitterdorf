@@ -7,6 +7,14 @@
 /public/*
 !/public/.htaccess
 !/public/robots.txt
+!/public/apple-touch-icon.png
+!/public/favicon.ico
+!/public/favicon.svg
+!/public/favicon-96x96.png
+!/public/site.webmanifest
+!/public/web-app-manifest-192x192.png
+!/public/web-app-manifest-512x512.png
+
 !/config/
 /config/*
 !/config/system/
@@ -23,3 +31,4 @@
 
 # Composer-related files
 /vendor/
+

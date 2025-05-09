@@ -30,13 +30,13 @@ return [
     ],
     'EXTENSIONS' => [
         'backend' => [
-            'backendFavicon' => '',
-            'backendLogo' => '',
+            'backendFavicon' => '/favicon.ico',
+            'backendLogo' => 'EXT:sitepackage/Resources/Public/Images/logo.svg',
             'loginBackgroundImage' => '',
-            'loginFootnote' => '',
-            'loginHighlightColor' => '',
-            'loginLogo' => '',
-            'loginLogoAlt' => '',
+            'loginFootnote' => 'Grundschule Mitterdorf',
+            'loginHighlightColor' => '#ea6821',
+            'loginLogo' => 'EXT:sitepackage/Resources/Public/Images/logo.svg',
+            'loginLogoAlt' => 'Grundschule Mitterdorf',
         ],
         'bootstrap_package' => [
             'disableCssProcessing' => '0',
