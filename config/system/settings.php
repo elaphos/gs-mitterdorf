@@ -34,7 +34,7 @@ return [
             'backendLogo' => 'EXT:sitepackage/Resources/Public/Images/logo.svg',
             'loginBackgroundImage' => '',
             'loginFootnote' => 'Grundschule Mitterdorf',
-            'loginHighlightColor' => '#ea6821',
+            'loginHighlightColor' => '#869829',
             'loginLogo' => 'EXT:sitepackage/Resources/Public/Images/logo.svg',
             'loginLogoAlt' => 'Grundschule Mitterdorf',
         ],
