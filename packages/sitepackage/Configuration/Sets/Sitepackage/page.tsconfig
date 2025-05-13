@@ -1,0 +1,27 @@
+#############
+#### RTE ####
+#############
+RTE {
+  default {
+    preset = sitepackage
+  }
+}
+
+#
+# TCEFORM
+#
+TCEFORM {
+  pages {
+
+  }
+  tt_content {
+
+  }
+}
+
+#
+# TCEMAIN
+#
+TCEMAIN {
+
+}
