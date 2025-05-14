@@ -29,6 +29,7 @@ set('typo3_webroot', 'public');
 $sharedDirectories = [
     '{{typo3_webroot}}/fileadmin',
     '{{typo3_webroot}}/typo3temp',
+    'var/labels/de/bootstrap_package',
 ];
 set('shared_dirs', $sharedDirectories);
 
